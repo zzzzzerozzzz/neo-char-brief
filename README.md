@@ -4,6 +4,15 @@
 
 ---
 
+## 🔴 最新狀態（2026-11-24，v4 已驗收）
+
+- **v4（zip 版）代碼 PASS** — 6 隻角色、統一描邊、`thinking`/`both-up`/`turn=1` 全部合格、確定性 md5 一致。
+- **附件 FAIL** — `角色視覺設定與製作計劃書.docx` 第二次仍然寫「美語教育 Podcast / 2–8 歲 / Bluey Peppa」，**已棄用**；只認 `CHARACTER-BIBLE.md`。
+- 待修清單、已 PASS 清單、下一輪交付格式 → 全部寫在 **[`STATUS-v4.md`](STATUS-v4.md)**，請先讀該檔再動手。
+- `skins.json` 欄名已按實際實作對齊（28 欄，`cFur/cFur2/cSkin/cShirt/cShirt2/cAccent/cEye/cNose/cLine`）；本 repo 的 `skins.schema.json` 已同步更新，舊名 `cBody/cHair/cPants/cShoe/cSkin2` 作廢。
+
+---
+
 ## 0. 上次做錯了什麼（先讀，避免重犯）
 
 上一次交件有兩個硬傷，這次必須避開：
