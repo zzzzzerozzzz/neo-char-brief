@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEO Rig Skin",
+  "description": "One entry per character. All characters share one rig; only this object differs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "name", "slot", "species", "earType", "tailType", "accessory",
+    "bodyW", "bodyH", "headScale", "eyeGap", "eyeY", "eyeR", "mouthY", "blush",
+    "whiskers", "muzzle", "cFur", "cFur2", "cSkin", "cShirt", "cShirt2",
+    "cAccent", "cEye", "cNose", "cLine", "turnDefault"
+  ],
+  "properties": {
+    "id": { "type": "string", "enum": ["cat-01", "cat-02", "dog-01", "dog-02", "human-01", "human-02", "dog-03"] },
+    "name": { "type": "string", "minLength": 1, "maxLength": 12 },
+    "slot": { "type": "string", "enum": ["core", "support"] },
+    "species": { "type": "string", "enum": ["cat", "dog", "human"] },
+    "earType": { "type": "string", "enum": ["pointy", "flop", "round", "none"] },
+    "tailType": { "type": "string", "enum": ["curl", "straight", "fluffy", "curly", "none"] },
+    "accessory": { "type": "string", "enum": ["glasses", "headset", "scarf", "cap", "tie", "none"] },
+    "bodyW": { "type": "number", "minimum": 0.7, "maximum": 1.3 },
+    "bodyH": { "type": "number", "minimum": 0.7, "maximum": 1.3 },
+    "headScale": { "type": "number", "minimum": 0.85, "maximum": 1.15 },
+    "eyeGap": { "type": "number", "minimum": 60, "maximum": 100 },
+    "eyeY": { "type": "number", "minimum": -90, "maximum": -40 },
+    "eyeR": { "type": "number", "minimum": 20, "maximum": 32 },
+    "mouthY": { "type": "number", "minimum": 0, "maximum": 40 },
+    "blush": { "type": "number", "minimum": 0, "maximum": 1 },
+    "whiskers": { "type": "boolean" },
+    "muzzle": { "type": "string", "enum": ["small", "wide", "none"] },
+    "cFur": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cFur2": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cSkin": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cShirt": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cShirt2": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cAccent": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cEye": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cNose": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "cLine": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "turnDefault": { "type": "number", "minimum": 0, "maximum": 1 },
+    "notes": { "type": "string", "maxLength": 40 }
+  }
+}
